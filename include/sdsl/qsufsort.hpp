@@ -451,12 +451,14 @@ class sorter
                 min_symbol = std::min(min_symbol, (int64_t)x[i]);
             }
 
+            /* // this check is not needed since we have exactly one 0
             if (0 == min_symbol) {
                 throw std::logic_error("Text contains 0-symbol. Suffix array can not be constructed.");
             }
             if (x[x.size()-1] > 0) {
                 throw std::logic_error("Last symbol is not 0-symbol. Suffix array can not be constructed.");
             }
+            */
             DBG_OUT<<"sorter: min_symbol="<<min_symbol<<std::endl;
             DBG_OUT<<"sorter: max_symbol="<<max_symbol<<std::endl;
 
